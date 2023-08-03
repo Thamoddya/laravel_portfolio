@@ -1,10 +1,7 @@
 "use strict";
 
 const dsnParam = {
-  map: {
-    marker_icon: "assets/img/map-marker.png",
-    api: "AIzaSyDMyAS2jdzj-vdgBIFaIStYOWJtSlghndg"
-  },
+
   cursor: {
     run: true,
     speed: 0.35,
@@ -16,7 +13,7 @@ const dsnParam = {
     smoothTouch: false,
     mouseMultiplier: 1
   },
-  name: "BLACKDSN"
+  name: "Thamoddya Rashmitha"
 };
 
 (function ($) {
@@ -57,7 +54,7 @@ const dsnParam = {
     await Headline($el);
     await tabs($el);
     await contactValidator();
-    if (!$off) await Isotope($el);else setTimeout(Isotope, 500);
+    if (!$off) await Isotope($el); else setTimeout(Isotope, 500);
     if (!$body.hasClass('elementor-editor-active')) dsnAjax() && (await dsnAjax().start());
     await list_project($el);
     await inputNumber($el);
@@ -66,7 +63,7 @@ const dsnParam = {
 
   function imgPosition() {
     $("[data-dsn-position]").each(function () {
-      if (this.nodeName === "IMG") $(this).css("object-position", dsnGrid.getData(this, "position", "center"));else $(this).css("background-position", dsnGrid.getData(this, "position", "center"));
+      if (this.nodeName === "IMG") $(this).css("object-position", dsnGrid.getData(this, "position", "center")); else $(this).css("background-position", dsnGrid.getData(this, "position", "center"));
     });
   }
 
@@ -123,7 +120,7 @@ const dsnParam = {
   function accordion($el = $(document)) {
     $el.find(".dsn-accordion").each(function () {
       const $this = $(this),
-            acc_q = $this.find(".accordion__question");
+        acc_q = $this.find(".accordion__question");
       acc_q.on("click", function () {
         const content = $(this).next();
         $this.find(".accordion__answer").not(content).slideUp(400);
@@ -146,12 +143,12 @@ const dsnParam = {
 
   function initMap($el = $(document)) {
     const map_id = $el.find(".map-custom"),
-          mapScriptId = document.getElementById("map_api");
+      mapScriptId = document.getElementById("map_api");
     if (map_id.length <= 0) return; // Styles a map in night mode.
 
     if (mapScriptId === null) {
       const GOOGLE_MAP_KEY = dsnParam.map.api,
-            script = document.createElement("script");
+        script = document.createElement("script");
       script.type = "text/javascript";
       script.id = "map_api";
       script.src = "https://maps.googleapis.com/maps/api/js?key=" + GOOGLE_MAP_KEY;
@@ -162,138 +159,138 @@ const dsnParam = {
       try {
         map_id.each(function () {
           let map_att = $(this),
-              lat = dsnGrid.getData(this, "lat"),
-              leg = dsnGrid.getData(this, "len"),
-              zoom = dsnGrid.getData(this, "zoom");
+            lat = dsnGrid.getData(this, "lat"),
+            leg = dsnGrid.getData(this, "len"),
+            zoom = dsnGrid.getData(this, "zoom");
           const letLeng = new google.maps.LatLng(lat, leg),
-                map = new google.maps.Map(map_att.get(0), {
-            center: {
-              lat: lat,
-              lng: leg
-            },
-            mapTypeControl: false,
-            scrollwheel: false,
-            draggable: true,
-            streetViewControl: false,
-            navigationControl: false,
-            zoom: zoom,
-            styles: [{
-              "featureType": "water",
-              "elementType": "geometry",
-              "stylers": [{
-                "color": "#e9e9e9"
+            map = new google.maps.Map(map_att.get(0), {
+              center: {
+                lat: lat,
+                lng: leg
+              },
+              mapTypeControl: false,
+              scrollwheel: false,
+              draggable: true,
+              streetViewControl: false,
+              navigationControl: false,
+              zoom: zoom,
+              styles: [{
+                "featureType": "water",
+                "elementType": "geometry",
+                "stylers": [{
+                  "color": "#e9e9e9"
+                }, {
+                  "lightness": 17
+                }]
               }, {
-                "lightness": 17
+                "featureType": "landscape",
+                "elementType": "geometry",
+                "stylers": [{
+                  "color": "#f5f5f5"
+                }, {
+                  "lightness": 20
+                }]
+              }, {
+                "featureType": "road.highway",
+                "elementType": "geometry.fill",
+                "stylers": [{
+                  "color": "#ffffff"
+                }, {
+                  "lightness": 17
+                }]
+              }, {
+                "featureType": "road.highway",
+                "elementType": "geometry.stroke",
+                "stylers": [{
+                  "color": "#ffffff"
+                }, {
+                  "lightness": 29
+                }, {
+                  "weight": 0.2
+                }]
+              }, {
+                "featureType": "road.arterial",
+                "elementType": "geometry",
+                "stylers": [{
+                  "color": "#ffffff"
+                }, {
+                  "lightness": 18
+                }]
+              }, {
+                "featureType": "road.local",
+                "elementType": "geometry",
+                "stylers": [{
+                  "color": "#ffffff"
+                }, {
+                  "lightness": 16
+                }]
+              }, {
+                "featureType": "poi",
+                "elementType": "geometry",
+                "stylers": [{
+                  "color": "#f5f5f5"
+                }, {
+                  "lightness": 21
+                }]
+              }, {
+                "featureType": "poi.park",
+                "elementType": "geometry",
+                "stylers": [{
+                  "color": "#dedede"
+                }, {
+                  "lightness": 21
+                }]
+              }, {
+                "elementType": "labels.text.stroke",
+                "stylers": [{
+                  "visibility": "on"
+                }, {
+                  "color": "#ffffff"
+                }, {
+                  "lightness": 16
+                }]
+              }, {
+                "elementType": "labels.text.fill",
+                "stylers": [{
+                  "saturation": 36
+                }, {
+                  "color": "#333333"
+                }, {
+                  "lightness": 40
+                }]
+              }, {
+                "elementType": "labels.icon",
+                "stylers": [{
+                  "visibility": "off"
+                }]
+              }, {
+                "featureType": "transit",
+                "elementType": "geometry",
+                "stylers": [{
+                  "color": "#f2f2f2"
+                }, {
+                  "lightness": 19
+                }]
+              }, {
+                "featureType": "administrative",
+                "elementType": "geometry.fill",
+                "stylers": [{
+                  "color": "#fefefe"
+                }, {
+                  "lightness": 20
+                }]
+              }, {
+                "featureType": "administrative",
+                "elementType": "geometry.stroke",
+                "stylers": [{
+                  "color": "#fefefe"
+                }, {
+                  "lightness": 17
+                }, {
+                  "weight": 1.2
+                }]
               }]
-            }, {
-              "featureType": "landscape",
-              "elementType": "geometry",
-              "stylers": [{
-                "color": "#f5f5f5"
-              }, {
-                "lightness": 20
-              }]
-            }, {
-              "featureType": "road.highway",
-              "elementType": "geometry.fill",
-              "stylers": [{
-                "color": "#ffffff"
-              }, {
-                "lightness": 17
-              }]
-            }, {
-              "featureType": "road.highway",
-              "elementType": "geometry.stroke",
-              "stylers": [{
-                "color": "#ffffff"
-              }, {
-                "lightness": 29
-              }, {
-                "weight": 0.2
-              }]
-            }, {
-              "featureType": "road.arterial",
-              "elementType": "geometry",
-              "stylers": [{
-                "color": "#ffffff"
-              }, {
-                "lightness": 18
-              }]
-            }, {
-              "featureType": "road.local",
-              "elementType": "geometry",
-              "stylers": [{
-                "color": "#ffffff"
-              }, {
-                "lightness": 16
-              }]
-            }, {
-              "featureType": "poi",
-              "elementType": "geometry",
-              "stylers": [{
-                "color": "#f5f5f5"
-              }, {
-                "lightness": 21
-              }]
-            }, {
-              "featureType": "poi.park",
-              "elementType": "geometry",
-              "stylers": [{
-                "color": "#dedede"
-              }, {
-                "lightness": 21
-              }]
-            }, {
-              "elementType": "labels.text.stroke",
-              "stylers": [{
-                "visibility": "on"
-              }, {
-                "color": "#ffffff"
-              }, {
-                "lightness": 16
-              }]
-            }, {
-              "elementType": "labels.text.fill",
-              "stylers": [{
-                "saturation": 36
-              }, {
-                "color": "#333333"
-              }, {
-                "lightness": 40
-              }]
-            }, {
-              "elementType": "labels.icon",
-              "stylers": [{
-                "visibility": "off"
-              }]
-            }, {
-              "featureType": "transit",
-              "elementType": "geometry",
-              "stylers": [{
-                "color": "#f2f2f2"
-              }, {
-                "lightness": 19
-              }]
-            }, {
-              "featureType": "administrative",
-              "elementType": "geometry.fill",
-              "stylers": [{
-                "color": "#fefefe"
-              }, {
-                "lightness": 20
-              }]
-            }, {
-              "featureType": "administrative",
-              "elementType": "geometry.stroke",
-              "stylers": [{
-                "color": "#fefefe"
-              }, {
-                "lightness": 17
-              }, {
-                "weight": 1.2
-              }]
-            }]
-          });
+            });
           google.maps.event.addDomListener(window, "resize", function () {
             let center = map.getCenter();
             google.maps.event.trigger(map, "resize");
@@ -331,10 +328,10 @@ const dsnParam = {
 
     $body.css('overflow', 'hidden');
     const progress_number = preloader.find(".loading-count"),
-          preloader_progress = preloader.find('.dsn-progress-path'),
-          present = {
-      value: 0
-    };
+      preloader_progress = preloader.find('.dsn-progress-path'),
+      present = {
+        value: 0
+      };
 
     const updateVal = (val, isSetVal) => {
       progress_number.text(val.toFixed(0));
@@ -651,9 +648,9 @@ const dsnParam = {
 
     await $el.find('.root-posts').each(function () {
       const rootPosts = $(this),
-            $filtering = rootPosts.find('.dsn-filtering .filtering'),
-            $isoItem = rootPosts.hasClass('has-filter') ? rootPosts.find('.dsn-posts') : rootPosts.find('.dsn-isotope'),
-            $buttonAjax = rootPosts.find('.button-load-more');
+        $filtering = rootPosts.find('.dsn-filtering .filtering'),
+        $isoItem = rootPosts.hasClass('has-filter') ? rootPosts.find('.dsn-posts') : rootPosts.find('.dsn-isotope'),
+        $buttonAjax = rootPosts.find('.button-load-more');
       if (!$filtering.length && !$isoItem.length && !$buttonAjax.length) return;
 
       const handleClickFilter = function ($iso) {
@@ -729,7 +726,7 @@ const dsnParam = {
               itemSelector: '.grid-item'
             });
           });
-        };else $args.onComplete = () => {
+        }; else $args.onComplete = () => {
           $('.dsn-isotope').each(function () {
             $(this).isotope({
               itemSelector: '.grid-item'
@@ -747,12 +744,12 @@ const dsnParam = {
     if (dsnGrid.isMobile()) return;
     ($el.hasClass("service-with-img") ? $el.find('.dsn-service') : $el.find(".service-with-img")).each(function () {
       const serviceItem = $(this).find(".service-item"),
-            onEnter = function () {
-        serviceItem.not(this).removeClass('active');
-        this.classList.add("active");
-        serviceItem.not(this).find('.service_description ').slideUp(400);
-        $(this).find('.service_description ').slideDown(400);
-      };
+        onEnter = function () {
+          serviceItem.not(this).removeClass('active');
+          this.classList.add("active");
+          serviceItem.not(this).find('.service_description ').slideUp(400);
+          $(this).find('.service_description ').slideDown(400);
+        };
 
       serviceItem.first().addClass("active");
       serviceItem.on('mouseenter', onEnter);
@@ -963,7 +960,8 @@ const dsnParam = {
     $el.find(".gallery-portfolio").each(function () {
       if (!window.fjGallery) return;
       const option = dsnGrid.getData(this, 'option') || {};
-      const gallery = fjGallery(this, { ...option,
+      const gallery = fjGallery(this, {
+        ...option,
         itemSelector: '.fj-gallery-item',
         onJustify: function () {
           ScrollTrigger.refresh();
@@ -1076,36 +1074,36 @@ const dsnParam = {
       if (!contentSlider) return;
       activeVideo(swiper);
       const [newNum, oldNum, newContent, oldContent] = getContent(swiper, contentSlider),
-            [newTitle, oldTitle] = [Array.from(newContent.querySelectorAll('.title .char') || []), Array.from(oldContent.querySelectorAll('.title .char') || [])],
-            $isRight = oldNum < newNum,
-            animate = {
-        show: {
-          autoAlpha: 1,
-          y: 0,
-          stagger: {
-            amount: 0.3,
-            from: "center"
+        [newTitle, oldTitle] = [Array.from(newContent.querySelectorAll('.title .char') || []), Array.from(oldContent.querySelectorAll('.title .char') || [])],
+        $isRight = oldNum < newNum,
+        animate = {
+          show: {
+            autoAlpha: 1,
+            y: 0,
+            stagger: {
+              amount: 0.3,
+              from: "center"
+            },
+            ease: "back.out(4)",
+            rotation: 0,
+            scale: 1,
+            yoyo: true
           },
-          ease: "back.out(4)",
-          rotation: 0,
-          scale: 1,
-          yoyo: true
-        },
-        hide: {
-          autoAlpha: 0,
-          y: !$isRight ? "25%" : "-25%",
-          stagger: {
-            amount: 0.3,
-            from: "center"
-          },
-          ease: "back.in(4)",
-          yoyo: true,
-          rotation: 8,
-          scale: 1.1
-        }
-      };
+          hide: {
+            autoAlpha: 0,
+            y: !$isRight ? "25%" : "-25%",
+            stagger: {
+              amount: 0.3,
+              from: "center"
+            },
+            ease: "back.in(4)",
+            yoyo: true,
+            rotation: 8,
+            scale: 1.1
+          }
+        };
       const current = Number.parseInt(newNum, 10) + 1,
-            num = this.querySelector(".slider-current-index");
+        num = this.querySelector(".slider-current-index");
       if (num) num.innerHTML = current > 9 ? current : '0' + current;
       if (swiper.dsnOnChange) swiper.dsnOnChange(newNum, oldNum, newContent, oldContent);
       tl.progress(1);
@@ -1239,7 +1237,7 @@ const dsnParam = {
       const images = [];
       $(this).find(".bg-container .slide-item").each(function () {
         const slide_content = $(this).find('.image-bg'),
-              id = $(this).data('dsn-id');
+          id = $(this).data('dsn-id');
 
         if (slide_content.find('video').length) {
           images[id] = {
@@ -1272,17 +1270,17 @@ const dsnParam = {
             swiper.slideNext();
           }
         },
-              handlePrev = function () {
-          if (tl.isActive()) return;
+          handlePrev = function () {
+            if (tl.isActive()) return;
 
-          if (swiper.activeIndex === 0 && !swiper.passedParams.loop) {
-            swiper.slideTo(swiper.slides.length);
-          } else {
-            swiper.slidePrev();
-          }
-        },
-              nextArrow = $(this).find('.next-arrow'),
-              prevArrow = $(this).find('.prev-arrow');
+            if (swiper.activeIndex === 0 && !swiper.passedParams.loop) {
+              swiper.slideTo(swiper.slides.length);
+            } else {
+              swiper.slidePrev();
+            }
+          },
+          nextArrow = $(this).find('.next-arrow'),
+          prevArrow = $(this).find('.prev-arrow');
 
         if (nextArrow.length) nextArrow.on('click', handleNext);
         if (prevArrow.length) prevArrow.on('click', handlePrev);
@@ -1319,7 +1317,7 @@ const dsnParam = {
 
   function mouseCirMove($off) {
     const $element = $("#dsn_cursor"),
-          inner = $("#dsn_cursor_inner");
+      inner = $("#dsn_cursor_inner");
     if (dsnParam.cursor.run) $body.addClass('dsn-cursor-effect');
     if (!$element.length || dsnGrid.isMobile() || !dsnParam.cursor.run) return;
     const mouseStop = 'dsn-stop-cursor';
@@ -1336,13 +1334,13 @@ const dsnParam = {
     }
 
     const defaultEl = $element.css(['opacity', 'width', 'height', 'borderColor', 'background']),
-          {
-      stop,
-      run
-    } = {
-      stop: () => $body.addClass(mouseStop),
-      run: () => $body.removeClass(mouseStop)
-    };
+      {
+        stop,
+        run
+      } = {
+        stop: () => $body.addClass(mouseStop),
+        run: () => $body.removeClass(mouseStop)
+      };
     dsnGrid.mouseHover("a:not(> img):not(.vid) , .dsn-button-sidebar,  button , .button-load-more , [data-cursor=\"open\"]", {
       enter: () => gsap.to($element, 0.5, {
         width: 70,
@@ -1350,7 +1348,8 @@ const dsnParam = {
         opacity: 0.5,
         backgroundColor: defaultEl.borderColor
       }),
-      leave: () => gsap.to($element, 0.5, { ...defaultEl
+      leave: () => gsap.to($element, 0.5, {
+        ...defaultEl
       })
     });
     dsnGrid.mouseHover(".c-hidden , .social-side a , .next-arrow , .prev-arrow , .dsn-btn.vid", {
@@ -1378,7 +1377,8 @@ const dsnParam = {
 
       leave() {
         run();
-        gsap.to($element, 0.5, { ...defaultEl,
+        gsap.to($element, 0.5, {
+          ...defaultEl,
           xPercent: -50,
           yPercent: -50
         });
@@ -1399,23 +1399,12 @@ const dsnParam = {
     const options = $('#dsn_box_options');
     options.on('click', function () {
       const isDark = $body.hasClass('v-dark'),
-            _dark = $('.v-dark'),
-            _light = $('.v-light');
-
+        _dark = $('.v-dark'),
+        _light = $('.v-light');
       $body.toggleClass('v-dark');
-
       _dark.removeClass('v-dark').addClass('v-light');
-
       _light.addClass('v-dark').removeClass('v-light');
 
-      $.ajax({
-        url: dsnParam.ajaxStyle,
-        type: "post",
-        data: {
-          color: isDark ? 'v-light' : 'v-dark',
-          style: "off"
-        }
-      });
     });
   }
 
@@ -1454,11 +1443,11 @@ const dsnParam = {
   function inputNumber($el = $(document)) {
     $el.find('.quantity').each(function () {
       const $this = $(this),
-            input = $this.find('input[type="number"]'),
-            btnUp = $this.find('.quantity-up'),
-            btnDown = $this.find('.quantity-down'),
-            min = input.attr('min') || 1,
-            max = input.attr('max') || Number.MAX_VALUE;
+        input = $this.find('input[type="number"]'),
+        btnUp = $this.find('.quantity-up'),
+        btnDown = $this.find('.quantity-down'),
+        min = input.attr('min') || 1,
+        max = input.attr('max') || Number.MAX_VALUE;
       btnUp.off('click');
       btnUp.on('click', ChangeValue.bind(this, true));
       btnDown.off('click');
@@ -1486,56 +1475,15 @@ const dsnParam = {
         input.trigger("change");
       }
     });
-  }
+  };
   /**
    * Validation Contact form
    */
 
 
   function contactValidator() {
-    const contact_form = $("#contact-form");
 
-    if (contact_form < 1) {
-      return;
-    }
 
-    contact_form.validator(); // when the form is submitted
-    // contact_form.off("submit");
-
-    contact_form.on("submit", function (e) {
-      // if the validator does not prevent form submit
-      if (!e.isDefaultPrevented()) {
-        // POST values in the background the the script URL
-        $.ajax({
-          type: "POST",
-          url: "contact.php",
-          data: $(this).serialize(),
-          success: function (data) {
-            // data = JSON object that contact.php returns
-            // we recieve the type of the message: success x danger and apply it to the
-            var messageAlert = "alert-" + data.type;
-            var messageText = data.message; // let's compose Bootstrap alert box HTML
-
-            var alertBox = "<div class=\"alert " + messageAlert + " alert-dismissable\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>" + messageText + "</div>"; // If we have messageAlert and messageText
-
-            if (messageAlert && messageText) {
-              // inject the alert to .messages div in our form
-              contact_form.find(".messages").html(alertBox); // empty the form
-
-              contact_form[0].reset();
-            }
-
-            setTimeout(function () {
-              contact_form.find(".messages").html("");
-            }, 3000);
-          },
-          error: function (error) {
-            console.log(error);
-          }
-        });
-        return false;
-      }
-    });
   }
 })(jQuery);
 
