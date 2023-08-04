@@ -4,7 +4,7 @@
             <div class="section-title d-flex ">
                 <div class="sub-section-title ">
                     <p class="description d-inline-block p-relative mb-10">
-                        ABOUT US
+                        ABOUT ME
                     </p>
                     <h2 class="title-h2 p-10 background-theme">
                         What CAN I do

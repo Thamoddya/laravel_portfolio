@@ -1,9 +1,9 @@
 <header id="site_menu_header" class="site-header  dsn-container d-none dsn-hamburger">
     <div class="main-logo">
-        <a href="" data-dsn-text="Blackdsn" class="custom-logo-link main-brand effect-ajax" rel="home"
+        <a href="" data-dsn-text="Thamoddya" class="custom-logo-link main-brand effect-ajax" rel="home"
             aria-current="page">
-            <img src="assets/img/logo-light.png" class="custom-logo logo-light" alt="Blackdsn" />
-            <img src="assets/img/logo.png" class="custom-logo logo-dark" alt="Blackdsn" />
+            <img src="assets/img/logo-light.png" class="custom-logo logo-light" alt="Thamoddya" />
+            <img src="assets/img/logo.png" class="custom-logo logo-dark" alt="Thamoddya" />
         </a>
     </div>
     <nav class="main-navigation ">

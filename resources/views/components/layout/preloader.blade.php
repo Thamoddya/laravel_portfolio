@@ -3,26 +3,26 @@
     <div class="dsnload p-absolute">
     <span class="dsnload__row">
         <span class="dsnload__img">
-        <img src="assets/img/logo-light.png" class="logo-dark" alt="Blackdsn" decoding="async" loading="lazy"/>
-        <img src="assets/img/logo.png" class="logo-light" alt="Blackdsn" decoding="async" loading="lazy"/>
+        <img src="assets/img/logo-light.png" class="logo-dark" alt="Thamoddya" decoding="async" loading="lazy"/>
+        <img src="assets/img/logo.png" class="logo-light" alt="Thamoddya" decoding="async" loading="lazy"/>
         </span>
     </span>
         <span class="dsnload__row dsnload__row--sibling">
         <span class="dsnload__img">
-             <img src="assets/img/logo-light.png" class="logo-dark" alt="Blackdsn" decoding="async" loading="lazy"/>
-        <img src="assets/img/logo.png" class="logo-light" alt="Blackdsn" decoding="async" loading="lazy"/>
+             <img src="assets/img/logo-light.png" class="logo-dark" alt="Thamoddya" decoding="async" loading="lazy"/>
+        <img src="assets/img/logo.png" class="logo-light" alt="Thamoddya" decoding="async" loading="lazy"/>
         </span>
     </span>
         <span class="dsnload__row dsnload__row--sibling">
         <span class="dsnload__img">
-            <img src="assets/img/logo-light.png" class="logo-dark" alt="Blackdsn" decoding="async" loading="lazy"/>
-        <img src="assets/img/logo.png" class="logo-light" alt="Blackdsn" decoding="async" loading="lazy"/>
+            <img src="assets/img/logo-light.png" class="logo-dark" alt="Thamoddya" decoding="async" loading="lazy"/>
+        <img src="assets/img/logo.png" class="logo-light" alt="Thamoddya" decoding="async" loading="lazy"/>
         </span>
     </span>
         <span class="dsnload__row dsnload__row--sibling">
         <span class="dsnload__img">
-           <img src="assets/img/logo-light.png" class="logo-dark" alt="Blackdsn" decoding="async" loading="lazy"/>
-        <img src="assets/img/logo.png" class="logo-light" alt="Blackdsn" decoding="async" loading="lazy"/>
+           <img src="assets/img/logo-light.png" class="logo-dark" alt="Thamoddya" decoding="async" loading="lazy"/>
+        <img src="assets/img/logo.png" class="logo-light" alt="Thamoddya" decoding="async" loading="lazy"/>
         </span>
     </span>
 

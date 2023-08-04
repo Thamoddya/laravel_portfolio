@@ -55,7 +55,7 @@
                 “A harmonious symphony of diverse tasks, where creativity and precision illuminate the digital realm.”
             </p>
             <div class="dsn-def-btn dsn-hover-icon dsn-icon-heading-color mt-30">
-                <a class="dsn-btn background-section move-circle has-icon-left" href="about.html"
+                <a class="dsn-btn background-section move-circle has-icon-left" href="#"
                     data-dsn="parallax">
                     <span class="dsn-icon dsn-bg-before btn-icon-left heading-color z-index-1">
                         <i class="fas fa-angle-right"></i>

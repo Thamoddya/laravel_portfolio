@@ -1396,6 +1396,8 @@ const dsnParam = {
    */
 
   function changeStyle() {
+    const $body = $('body');
+    $body.addClass('v-dark');
     const options = $('#dsn_box_options');
     options.on('click', function () {
       const isDark = $body.hasClass('v-dark'),
@@ -1404,7 +1406,6 @@ const dsnParam = {
       $body.toggleClass('v-dark');
       _dark.removeClass('v-dark').addClass('v-light');
       _light.addClass('v-dark').removeClass('v-light');
-
     });
   }
 
@@ -1490,4 +1491,3 @@ const dsnParam = {
 function sidebarOptions() {
   document.body.classList.toggle('dsn-show-sidebar');
 }
-//# sourceMappingURL=custom.js.map

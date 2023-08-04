@@ -113,8 +113,28 @@ Template Name: BlackDsn - Ajax Portfolio HTML Template
   --bg-overlay: #000;
   --overlay-blend-mode: unset;
 }
+
+
+/* Hide the scrollbar for WebKit-based browsers */
+body::-webkit-scrollbar {
+  width: 0.0em; /* Set the width of the scrollbar */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #88888800; /* Color of the scrollbar thumb */
+  border-radius: 2px; /* Rounded corners of the thumb */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #55555500; /* Color of the scrollbar thumb on hover */
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #f1f1f100; /* Color of the scrollbar track */
+}
+
 :root .dsn-icon-theme-color {
-  --theme-color: #f7e0c7;
+  --theme-color: #f7e0c700;
 }
 @media only screen and (min-width: 1400px) {
   :root {
@@ -1539,6 +1559,7 @@ a:hover, a:active {
 }
 .dsn-socials li a {
   position: relative;
+  margin: 5px;
   width: 60px;
   height: 60px;
   border-width: 1px;
@@ -2700,7 +2721,7 @@ a:hover, a:active {
     order: 1;
     margin-top: 15px;
   }
-  .dsn-style-cards .dsn-posts.box-content-hover .post-content .post-title-info::before {
+  /* .dsn-style-cards .dsn-posts.box-content-hover .post-content .post-title-info::before {
     counter-increment: compteListe 1;
     color: var(--heading-color);
     content: "/ " counter(compteListe);
@@ -2709,7 +2730,7 @@ a:hover, a:active {
     top: 7px;
     font-size: 13px;
     letter-spacing: 2px;
-  }
+  } */
   .dsn-style-cards .dsn-posts.box-content-hover .post-content .post-description-info {
     flex: 0 1 50%;
   }
