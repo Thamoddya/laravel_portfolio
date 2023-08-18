@@ -16,9 +16,7 @@ class MailController extends Controller
             'body' => [
                 'Full Name' => $request->input('full-name'),
                 'Email' => $request->input('email'),
-                'Phone Number' => $request->input('phone-number'),
                 'Subject' => $request->input('subject'),
-                'Budget' => $request->input('budget'),
                 'Message' => $request->input('message'),
             ],
         ];

@@ -9,4 +9,5 @@
         @include('components.layout.Home.testimonials')
         @include('components.layout.Home.stories')
     </div>
+    @include('components.layout.footer')
 @endsection

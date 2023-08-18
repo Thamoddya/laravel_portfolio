@@ -30,8 +30,8 @@
                         </span>
                     </li>
                     <li class="nav-item ">
-                        <a title="Personal" href="" data-dsn-text="Personal">
-                            <span class="overflow">Personal</span>
+                        <a title="Personal" href="{{route('home')}}" data-dsn-text="Personal">
+                            <span class="overflow">Home</span>
                         </a>
                     </li>
                 </ul>
@@ -114,7 +114,7 @@
                 </ul>
             </li>
             <li class="nav-item ">
-                <a title="Home" href="">
+                <a title="Home" href="{{route('contact_mail')}}">
                     <span class="overflow">Contact</span>
                 </a>
             </li>
