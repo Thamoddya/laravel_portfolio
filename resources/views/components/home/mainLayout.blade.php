@@ -97,10 +97,10 @@
     <div id="line_head"><span class="container"></span></div>
     <!-- ========== End Line BG ========== -->
 
-    <script src="assets/js/jquery-3.1.1.min.js"></script>
-    <script src="assets/js/plugins.min.js"></script>
-    <script src="assets/js/plugins/dsn-grid.min.js"></script>
-    <script src="assets/js/custom.js"></script>
+    <script src="{{asset('assets/js/jquery-3.1.1.min.js')}}"></script>
+    <script src="{{asset('assets/js/plugins.min.js')}}"></script>
+    <script src="{{asset('assets/js/plugins/dsn-grid.min.js')}}"></script>
+    <script src="{{asset('assets/js/custom.js')}}"></script>
 </body>
 
 </html>

@@ -1,9 +1,9 @@
 <header id="site_menu_header" class="site-header  dsn-container d-none dsn-hamburger">
     <div class="main-logo">
-        <a href="" data-dsn-text="Thamoddya" class="custom-logo-link main-brand effect-ajax" rel="home"
+        <a href="{{route('home')}}" data-dsn-text="Thamoddya Rashmitha" class="custom-logo-link main-brand effect-ajax" rel="home"
             aria-current="page">
-            <img src="assets/img/logo-light.png" class="custom-logo logo-light" alt="Thamoddya" />
-            <img src="assets/img/logo.png" class="custom-logo logo-dark" alt="Thamoddya" />
+            <img src="{{asset('assets/img/logo-light.png')}}" class="custom-logo logo-light" alt="Thamoddya" />
+            <img src="{{asset('assets/img/logo.png')}}" class="custom-logo logo-dark" alt="Thamoddya" />
         </a>
     </div>
     <nav class="main-navigation ">
@@ -30,11 +30,16 @@
                         </span>
                     </li>
                     <li class="nav-item ">
-                        <a title="Personal" href="{{route('home')}}" data-dsn-text="Personal">
+                        <a title="Personal" href="{{route('home')}}" data-dsn-text="Thamoddya Rashmitha | Home">
                             <span class="overflow">Home</span>
                         </a>
                     </li>
                 </ul>
+            </li>
+            <li class="nav-item " style="--dsn-li-index: 4;">
+                <a title="Welcome To my Services" href="{{route('service')}}" data-dsn-text="Thamoddya Rashmitha | Services">
+                    <span class="overflow">Service</span>
+                </a>
             </li>
             <li class="nav-item has-sub-menu">
                 <a title="Home" href="#0">
@@ -80,8 +85,8 @@
                         </span>
                     </li>
                     <li class="nav-item ">
-                        <a title="VISIONAID" href="Projects" data-dsn-text="VISIONAID">
-                            <span class="overflow">VISIONAID</span>
+                        <a title="Coming Soon" href="{{route('work')}}" data-dsn-text="Here Are My Latest Works">
+                            <span class="overflow">Latest Works</span>
                         </a>
                     </li>
                 </ul>
@@ -107,7 +112,7 @@
                         </span>
                     </li>
                     <li class="nav-item ">
-                        <a title="Stories" href="" data-dsn-text="Stories">
+                        <a title="Stories" href="{{route('blog')}}" data-dsn-text="Welcome To My Blog">
                             <span class="overflow">Blog</span>
                         </a>
                     </li>
@@ -125,7 +130,7 @@
                     <h5 class="sm-title-block mb-10">
                         <Address></Address>
                     </h5>
-                    Anuradhaopura , Sri Lanka
+                    Anuradhapura , Sri Lanka
                 </div>
                 <div class="nav-content mt-30">
                     <h5 class="sm-title-block mb-10">Contact</h5>

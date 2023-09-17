@@ -19,7 +19,6 @@
                     <div class="icon-left dsn-icon-heading-color d-flex align-items-center h-100">
                         <div class="d-grid dsn-service icon-left align-items-center">
                             <div class="service-item p-relative grid-item style-box  background-transparent">
-
                                 <div class="service-item-inner number-item h-100">
                                     <div class="dsn-icon"><i class="fas fa-map-marker-alt"
                                             aria-hidden="true"></i></div>

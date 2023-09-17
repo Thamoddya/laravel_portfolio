@@ -1,4 +1,4 @@
-<form id="contact-form" class="form w-100"method="POST" action="{{ url('contact_mail') }}" data-toggle="validator">
+<form id="contact-form" class="form w-100" method="POST" action="{{ url('contact_mail') }}" data-toggle="validator">
     {{ csrf_field() }}
     <div class="messages"></div>
     <div class="input__wrap controls">
