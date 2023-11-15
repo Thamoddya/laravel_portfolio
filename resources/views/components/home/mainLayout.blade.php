@@ -11,6 +11,7 @@
 
     <title>Thamoddya Rashmitha</title>
 
+
     <link href="{{ asset('assets/css/plugins.css') }}" rel="stylesheet" />
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 </head>
