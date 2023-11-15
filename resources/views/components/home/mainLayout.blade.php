@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
 
     <link rel="icon" href="{{ asset('assets/img/logo-32x32.png') }}" sizes="32x32" />
     <link rel="icon" href="{{ asset('assets/img/logo-192x192.png') }}" sizes="192x192" />
