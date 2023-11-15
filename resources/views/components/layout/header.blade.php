@@ -2,8 +2,8 @@
     <div class="main-logo">
         <a href="{{route('home')}}" data-dsn-text="Thamoddya Rashmitha" class="custom-logo-link main-brand effect-ajax" rel="home"
             aria-current="page">
-            <img src="{{asset('assets/img/logo-light.png')}}" class="custom-logo logo-light" alt="Thamoddya" />
-            <img src="{{asset('assets/img/logo.png')}}" class="custom-logo logo-dark" alt="Thamoddya" />
+            <img src="{{asset('assets/img/logo.svg')}}" class="custom-logo logo-light" alt="Thamoddya" />
+            <img src="{{asset('assets/img/logo.svg')}}" class="custom-logo logo-dark" alt="Thamoddya" />
         </a>
     </div>
     <nav class="main-navigation ">

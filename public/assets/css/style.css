@@ -1,96 +1,55 @@
-@charset "UTF-8";
-/*-----------------------------------------------------------
 
-Template Name: BlackDsn - Ajax Portfolio HTML Template
-  Template URI: http://theme.dsngrid.com/blackdsn
-  Description: BlackDsn Ajax Portfolio Showcase HTML Template
-  Author: design_grid
-  Author URI: https://themeforest.net/user/design_grid
-  Version: 1.0.0
-
--------------------------------------------------------------*/
-/*-----------------------------------------------------------
-
-    1.  Variables
-    2.  Mixins
-      - Mixins Master
-      - Utilities
-    3.  Normalize
-    4.  Helpers
-    5. Typography
-      - Copy
-	  - Headings
-	6. Core
-    7. Navigation
-      - Links
-      - Menus
-	  - Next & Previous
-    8. Content
-      - pages
-      - Comments
-      - Archives
-      - Footer
-    9.Forms
-      - Button
-      - Fields
-    10.Blocks
-    11.Media
-      - captions
-    12.Version Light
-
--------------------------------------------------------------*/
 :root, :root .v-light, :root .v-light-head {
-  --bg-color: #f9f9f9;
-  --assistant-color: #efefef;
-  --theme-color: #e4dcd3;
-  --theme-color-font: #fff;
-  --font-color: #0009;
-  --heading-color: #000;
-  --border-color: #2828281a;
-  --smooth-color: #141414;
-  --reverse-color: #141414;
-  --reverse-heading-color: #fff;
-  --bg-btn: #f6fafd;
-  /**
-     Elementor color
-  */
-  --divider-color: var(--border-color);
-}
-
-:root .v-dark, :root .v-dark-head {
-  --bg-color: #131313;
-  --assistant-color: #191919;
-  --theme-color: #e4e4dd;
-  --font-color: #ddd;
-  --heading-color: #fff;
-  --border-color: #ffffff1a;
-  --smooth-color: #f9f9f9;
-  --reverse-color: #f9f9f9;
-  --reverse-heading-color: #000;
-  --bg-btn: #0a0909;
-}
-:root .v-dark .background-theme, :root .v-dark.background-theme, :root .v-dark-head .background-theme, :root .v-dark-head.background-theme {
-  --font-color: #0009;
-  --heading-color: #000;
-}
-
-@media only screen and (max-width: 991px) {
-  .v-dark-head-mobile {
-    --bg-color: #131313;
+    --bg-color: #122620;
     --assistant-color: #191919;
     --theme-color: #e4e4dd;
-    --font-color: #ddd;
-    --heading-color: #fff;
+    --font-color: #D6AD60;
+    --heading-color: #B68D40;
     --border-color: #ffffff1a;
     --smooth-color: #f9f9f9;
     --reverse-color: #f9f9f9;
     --reverse-heading-color: #000;
-    --bg-btn: #0a0909;
-  }
-  .v-dark-head-mobile .background-theme, .v-dark-head-mobile.background-theme {
-    --font-color: #0009;
+    --bg-btn: #B68D40;
+    /**
+       Elementor color
+    */
+    --divider-color: var(--border-color);
+}
+
+:root .v-dark, :root .v-dark-head {
+    --bg-color: #122620;
+    --assistant-color: #191919;
+    --theme-color: #e4e4dd;
+    --font-color: #D6AD60;
+    --heading-color: #B68D40;
+    --border-color: #ffffff1a;
+    --smooth-color: #f9f9f9;
+    --reverse-color: #f9f9f9;
+    --reverse-heading-color: #000;
+    --bg-btn: #B68D40;
+}
+:root .v-dark .background-theme, :root .v-dark.background-theme, :root .v-dark-head .background-theme, :root .v-dark-head.background-theme {
+    --font-color: #D6AD60;
     --heading-color: #000;
-  }
+}
+
+@media only screen and (max-width: 991px) {
+    .v-dark-head-mobile {
+        --bg-color: #122620;
+        --assistant-color: #191919;
+        --theme-color: #e4e4dd;
+        --font-color: #D6AD60;
+        --heading-color: #B68D40;
+        --border-color: #ffffff1a;
+        --smooth-color: #f9f9f9;
+        --reverse-color: #f9f9f9;
+        --reverse-heading-color: #000;
+        --bg-btn: #B68D40;
+    }
+    .v-dark-head-mobile .background-theme, .v-dark-head-mobile.background-theme {
+        --font-color: #D6AD60;
+        --heading-color: #B68D40;
+    }
 }
 :root {
   --body-font: "Poppins", sans-serif;
@@ -371,6 +330,7 @@ body:not(.dsn-cursor-effect) #dsn_cursor, body:not(.dsn-cursor-effect) #dsn_curs
     transform: rotate(360deg);
   }
 }
+
 .day-night {
   position: fixed;
   z-index: 100;
@@ -380,6 +340,7 @@ body:not(.dsn-cursor-effect) #dsn_cursor, body:not(.dsn-cursor-effect) #dsn_curs
   height: 30px;
   cursor: pointer;
   text-align: center;
+    display: none;
 }
 .day-night svg {
   width: 30px;

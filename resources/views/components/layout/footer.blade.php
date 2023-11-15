@@ -31,8 +31,8 @@
                         <div class="main-logo">
                             <a href="#" data-dsn-text="Thamoddya"
                                 class="custom-logo-link main-brand effect-ajax" rel="home">
-                                <img class="custom-logo logo-light" src="{{asset('assets/img/logo-light.png')}}" alt="Thamoddya" />
-                                <img class="custom-logo logo-dark" src="{{asset('assets/img/logo.png')}}" alt="Thamoddya" />
+                                <img class="custom-logo logo-light" src="{{asset('assets/img/logo.svg')}}" alt="Thamoddya" />
+                                <img class="custom-logo logo-dark" src="{{asset('assets/img/logo.svg')}}" alt="Thamoddya" />
                             </a>
                         </div>
                     </div>
